@@ -21,25 +21,37 @@ class Cell():
         self._x2 = x2
         self._y2 = y2
         if self.left_wall:
-            line = Line(
-                Point(self._x1,self._y1),
-                Point(self._x1,self._y2))
-            self._window.draw_line(line)
+            color = "black"
+        else:
+            color = "white"
+        line = Line(
+            Point(self._x1,self._y1),
+            Point(self._x1,self._y2))
+        self._window.draw_line(line,color)
         if self.right_wall:
-            line = Line(
-                Point(self._x2,self._y1),
-                Point(self._x2,self._y2))
-            self._window.draw_line(line)
+                color = "black"
+        else:
+            color = "white"
+        line = Line(
+            Point(self._x2,self._y1),
+            Point(self._x2,self._y2))
+        self._window.draw_line(line,color)
         if self.top_wall:
-            line = Line(
-                Point(self._x1,self._y1),
-                Point(self._x2,self._y1))
-            self._window.draw_line(line)
+            color = "black"
+        else:
+            color = "white"
+        line = Line(
+            Point(self._x1,self._y1),
+            Point(self._x2,self._y1))
+        self._window.draw_line(line,color)
         if self.bottom_wall:
-            line = Line(
-                Point(self._x1,self._y2),
-                Point(self._x2,self._y2))
-            self._window.draw_line(line)
+            color = "black"
+        else:
+            color = "white"
+        line = Line(
+            Point(self._x1,self._y2),
+            Point(self._x2,self._y2))
+        self._window.draw_line(line,color)
     
     def draw_move(self, to_cell, undo=False):
         if undo:
