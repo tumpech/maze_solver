@@ -46,7 +46,7 @@ class Maze():
         x2 = x1 + self._cell_size_x
         y2 = y1 + self._cell_size_y
         self._cells[i][j].draw(x1,y1,x2,y2)
-        self._animate()
+        #self._animate()
     
     def _animate(self):
         if self._win == None:
